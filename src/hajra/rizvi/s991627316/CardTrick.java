@@ -1,4 +1,4 @@
-package pickacard;
+package hajra.rizvi.s991627316;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then asks the user to pick a card and
