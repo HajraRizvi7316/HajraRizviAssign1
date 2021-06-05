@@ -18,8 +18,16 @@ public class CardTrick {
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
+            c.setValue(c.randomValue());
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setSuit(Card.SUITS[c.randomSuit()]);
+            magicHand[i] = c;
         }
+        //Printing out the randomly generated hand using for each loop
+        for (Card magicHands : magicHand) {
+            System.out.println(magicHands.getSuit() + " " + magicHands.getValue());
+        }
+        
 
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here

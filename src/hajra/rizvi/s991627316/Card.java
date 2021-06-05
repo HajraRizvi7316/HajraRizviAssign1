@@ -31,13 +31,33 @@ public class Card {
     public void setSuit(String suit) {
         this.suit = suit;
     }
-
+    
+    /**
+     * 
+     * @return the value
+     */
     public int getValue() {
         return value;
     }
-
+    
+    /**
+     * 
+     * @param value the value to set  
+     */
     public void setValue(int value) {
         this.value = value;
+    }
+    
+    //random value
+    public int randomValue(){
+        int value=(int)(Math.random()*13)+1;
+        return value;
+    }
+    
+    //random suit
+    public int randomSuit(){
+        int suit =(int)(Math.random()*4) +0;
+        return suit;
     }
     
 }
