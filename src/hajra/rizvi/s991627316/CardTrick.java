@@ -10,6 +10,7 @@ import java.util.Scanner;
  * @author Paul Bonenfant
  * @author Hajra Rizvi
  * @date 06/05/2021
+ * @studentnumber 991627316
  */
 public class CardTrick {
 
@@ -25,25 +26,31 @@ public class CardTrick {
             c.setSuit(Card.SUITS[c.randomSuit()]);
             magicHand[i] = c;
         }
-        //Printing out the randomly generated hand using for each loop
-        for (Card magicHands : magicHand) {
-            System.out.println(magicHands.getValue() + " of " + magicHands.getSuit());
-        }
+
         //Creating a new Card object luckyCard
         Card luckyCard = new Card();
         luckyCard.setSuit("Hearts");
         luckyCard.setValue(5);
         
-        
+        //Printing the Lucky Card Obejct
         System.out.println("Lucky Card: " + luckyCard.getValue()+ " of " + luckyCard.getSuit());
         
+        //Matching the lucky card object to the array of random card objects
         String finalValue = "Sorry! You didn't pick the lucky card.";
         for (Card magicHands : magicHand){
             if (luckyCard.getValue() == magicHands.getValue() && luckyCard.getSuit().equals(magicHands.getSuit())){
                 finalValue = "Congratulations! You picked a lucky card!";
             }
         }
+        //Outputting the End message
         System.out.println(finalValue);
+        System.out.println("================");
+        
+        //Output randomly generated hand using for each loop
+        System.out.println("The Secret Hand: ");
+        for (Card magicHands : magicHand) {
+            System.out.println(magicHands.getValue() + " of " + magicHands.getSuit());
+        }
         
         //insert code to ask the user for Card value and suit, create their card
 //         System.out.println("Let's Begin!");

@@ -11,6 +11,7 @@ package hajra.rizvi.s991627316;
  * @author Paul Bonenfant
  * @author Hajra Rizvi
  * @date 06/05/2021
+ * @studentnumber 991627316
  */
 public class Card {
 
