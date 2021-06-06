@@ -29,29 +29,33 @@ public class CardTrick {
         for (Card magicHands : magicHand) {
             System.out.println(magicHands.getSuit() + " " + magicHands.getValue());
         }
+        //Creating a new Card object luckyCard
+        Card luckyCard = new Card();
+        luckyCard.setSuit("Hearts");
+        luckyCard.setValue(5);
         
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Let's Begin!");
-        System.out.println("Pick a card! Any Card!");
-        System.out.print("Pick the card value (1-13): ");
-        int inputValue = in.nextInt();
-        System.out.print("Pick the card suit (Hearts = 1, Diamonds = 2, "
-                + "Spades = 3, Clubs = 4): ");
-        int inputSuit = in.nextInt();
+//         System.out.println("Let's Begin!");
+//         System.out.println("Pick a card! Any Card!");
+//         System.out.print("Pick the card value (1-13): ");
+//         int inputValue = in.nextInt();
+//         System.out.print("Pick the card suit (Hearts = 1, Diamonds = 2, "
+//                 + "Spades = 3, Clubs = 4): ");
+//         int inputSuit = in.nextInt();
         
-        String userSuit;
-        if (inputSuit == 1){
-            userSuit = "Hearts";
-        } else if (inputSuit == 2){
-            userSuit = "Diamonds";
-        } else if (inputSuit == 3){
-            userSuit = "Spades";
-        } else {
-            userSuit = "Clubs";
-        }
+//         String userSuit;
+//         if (inputSuit == 1){
+//             userSuit = "Hearts";
+//         } else if (inputSuit == 2){
+//             userSuit = "Diamonds";
+//         } else if (inputSuit == 3){
+//             userSuit = "Spades";
+//         } else {
+//             userSuit = "Clubs";
+//         }
         
-        System.out.println("Your Card: " + inputValue + " of " 
-                + userSuit);
+//         System.out.println("Your Card: " + inputValue + " of " 
+//                 + userSuit);
         
         
         // and search magicHand here
