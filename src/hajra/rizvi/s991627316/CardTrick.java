@@ -27,12 +27,23 @@ public class CardTrick {
         }
         //Printing out the randomly generated hand using for each loop
         for (Card magicHands : magicHand) {
-            System.out.println(magicHands.getSuit() + " " + magicHands.getValue());
+            System.out.println(magicHands.getValue() + " of " + magicHands.getSuit());
         }
         //Creating a new Card object luckyCard
         Card luckyCard = new Card();
         luckyCard.setSuit("Hearts");
         luckyCard.setValue(5);
+        
+        
+        System.out.println("Lucky Card: " + luckyCard.getValue()+ " of " + luckyCard.getSuit());
+        
+        String finalValue = "Sorry! You didn't pick the lucky card.";
+        for (Card magicHands : magicHand){
+            if (luckyCard.getValue() == magicHands.getValue() && luckyCard.getSuit().equals(magicHands.getSuit())){
+                finalValue = "Congratulations! You picked a lucky card!";
+            }
+        }
+        System.out.println(finalValue);
         
         //insert code to ask the user for Card value and suit, create their card
 //         System.out.println("Let's Begin!");
@@ -58,15 +69,15 @@ public class CardTrick {
 //                 + userSuit);
         
         
-        // and search magicHand here
-        String finalValue = "You Lose!";
-        for (Card magicHands : magicHand){
-            if (inputValue == magicHands.getValue() && userSuit.equals(magicHands.getSuit())){
-                finalValue = "You Win!";
-            }
-        }
-        //Then report the result here
-        System.out.println(finalValue);    
+//        // and search magicHand here
+//        String finalValue = "You Lose!";
+//        for (Card magicHands : magicHand){
+//            if (inputValue == magicHands.getValue() && userSuit.equals(magicHands.getSuit())){
+//                finalValue = "You Win!";
+//            }
+//        }
+//        //Then report the result here
+//        System.out.println(finalValue);    
         
         
 
